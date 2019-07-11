@@ -6,7 +6,7 @@ import Letter from '../LetterGenerator/Letter';
 
 // TODO: Installed CORS Chrome extension to by-pass CORS origin issue.  Will need to resolve later
 
-console.log(Object.keys(Letter))
+
 
 
 const url = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=a';
@@ -17,9 +17,8 @@ class wordGenerator extends Component {
 
     constructor() {
         super();
-        this.state = { words: [] }
+        this.state = { words: '' }
     }
-
 
     componentDidMount() {
         fetch(url)
@@ -29,17 +28,20 @@ class wordGenerator extends Component {
             .then(data => {
                 let words = data
                 console.log(words)
+                return words;
             })
 
     }
 
-    render(){
-        return(
+    render(words){
+
+    return(
             <div>
-                <p id="word" className="word">Someword</p>
-            </div >
+                <p id="word" className="word">XYZ{this.words}</p>
+            </div>
         )
     }
+    
  
 
 

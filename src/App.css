@@ -8,22 +8,34 @@
 }
 
 button{
-  background: none;
-  border: none;
+  display: block;
+  background: rgb(74, 192, 113);
+  /* border: none; */
+  border-radius: 10px;
   color: white;
   cursor: pointer;
-  font-size: xx-large;
-  width: 100%;
   outline: none;
+  font-size: .8em;
+  margin: 5% auto 5% auto;
 }
 
-span{ 
+#lg-letter{
+  font-size: 10em;
+  font-weight: normal;
+  margin: 0;
+}
 
+span{
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  opacity: .9;
 }
 
 span:hover{
   font-size: 2em;
   text-shadow: 1px 1px 10px black;
+  opacity: 1;
 }
 
 #alphabet{
@@ -36,37 +48,10 @@ span:hover{
   border-bottom: 1px solid rgba(255, 255, 255, 0.246); */
 }
 
-.zBox1{
-  margin: auto;
-  width: 50%;
-  height: 25%;
-  box-shadow: 2px 2px 2px 2px #282c34;
-}
-
-.zBox2{
-  position: fixed;
-  top: 2.8em;
-  left: 9.5em;
-  box-shadow: 1px 1px 1px 1px #282c34;
-  background-color: rgb(99, 187, 150);
-  width: 70%;
-  min-height: 300px;
-  z-index: -1;
-  border-radius: 1em;
-}
-
-.zBox3{
-  position: fixed;
-  top: 6em;
-  left: 10.5em;
-  box-shadow: 1px 1px 1px 1px #282c34;
-  background-color: rgb(57, 176, 197);
-  width: 70%;
-  min-height: 300px;
-  z-index: -2;
-  border-radius: 1em;
-}
-
 h1{
   text-shadow: 2px 2px 2px black;
+}
+
+#word{
+  font-size: 1.5em;
 }

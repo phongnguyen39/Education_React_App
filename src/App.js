@@ -3,12 +3,6 @@ import './App.css';
 import Letter from './LetterGenerator/Letter';
 import Word from './WordGenerator/Word';
 
-
-
-const reload = () => {
-  window.location.reload();
-}
-
 class App extends Component {
 
   state = {
@@ -17,22 +11,33 @@ class App extends Component {
     otherState: ''
   }
 
-  randomize = () =>{
+  randomize = () => {
+    console.log("randomize ran")
     this.setState({
-        
+
     })
   }
 
   selectLetter = (props) => {
     console.log("Letter")
-    console.log(Object.values(props.toString()))
+    console.log(props[0])
     this.setState({
-      letters: props.button
+      letters: props[0]
     })
+
+    return (
+      <div>
+        <p>props[0]</p>
+      </div>
+    )
+
   }
 
-
   render() {
+
+    const style = {
+      font: '1.5em'
+    }
 
     return (
       <div className="App" >
@@ -40,8 +45,9 @@ class App extends Component {
         <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet"></link>
 
         <h1 id="title">Fun with Letters and Words</h1>
+        <p>Select a letter</p>
         <div id="alphabet">
-          <span><button onClick={this.selectLetter}> A </button></span>
+          <span onClick={this.selectLetter.bind(this, 'A')}>A </span>
           <span>B </span>
           <span>C </span>
           <span>D </span>
@@ -67,16 +73,13 @@ class App extends Component {
           <span>Y </span>
           <span>Z </span>
         </div>
-        <button className='Letter' onClick={this.randomize}><Letter letters={this.state.letters} /></button>
+        <h1 id="lg-letter">
+          {/* <Letter style = {style} letters={this.state.letters[0]}>{this.state.letters[0]}</Letter> */}
+          <Letter style = {style} letters={this.state.letters[0]}><selectedLeter></selectedLeter></Letter>
+        </h1>
+        <button onClick={this.randomize}>Random Letter</button>
 
-        <Word></Word>
-
-
-        {/* <div className='zBox1'></div>
-      <div className='zBox2'></div>
-      <div className='zBox3'></div> */}
-
-
+        <Word id='word'></Word>
       </div>
     );
   }
