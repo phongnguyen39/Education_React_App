@@ -1,33 +1,64 @@
 .App {
   text-align: center;
+  color: white; 
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+#title{
+  font-family: 'Permanent Marker', cursive;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button{
+  background: none;
+  border: none;
   color: white;
+  cursor: pointer;
+  font-size: xx-large;
+  width: 100%;
+  outline: none;
 }
 
-.App-link {
-  color: #61dafb;
+span:hover{
+  font-size: 2em;
+  text-shadow: 1px 1px 10px black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#alphabet{
+  height: 2em;
+  /* border-top: 1px solid rgba(255, 255, 255, 0.246);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.246); */
+}
+
+.zBox1{
+  margin: auto;
+  width: 50%;
+  height: 25%;
+  box-shadow: 2px 2px 2px 2px #282c34;
+}
+
+.zBox2{
+  position: fixed;
+  top: 2.8em;
+  left: 9.5em;
+  box-shadow: 1px 1px 1px 1px #282c34;
+  background-color: rgb(99, 187, 150);
+  width: 70%;
+  min-height: 300px;
+  z-index: -1;
+  border-radius: 1em;
+}
+
+.zBox3{
+  position: fixed;
+  top: 6em;
+  left: 10.5em;
+  box-shadow: 1px 1px 1px 1px #282c34;
+  background-color: rgb(57, 176, 197);
+  width: 70%;
+  min-height: 300px;
+  z-index: -2;
+  border-radius: 1em;
+}
+
+h1{
+  text-shadow: 2px 2px 2px black;
 }

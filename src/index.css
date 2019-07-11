@@ -5,6 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(rgb(65, 93, 93),rgb(15, 46, 51) );
+  font-size: xx-large;
+  height: 100vh;
+  background-repeat: none;
 }
 
 code {
