@@ -17,13 +17,21 @@ button{
   outline: none;
 }
 
+span{ 
+
+}
+
 span:hover{
   font-size: 2em;
   text-shadow: 1px 1px 10px black;
 }
 
 #alphabet{
+  display: flex;
+  align-content: space-around;
+  justify-content: center;
   height: 2em;
+  align-content: bottom;
   /* border-top: 1px solid rgba(255, 255, 255, 0.246);
   border-bottom: 1px solid rgba(255, 255, 255, 0.246); */
 }
