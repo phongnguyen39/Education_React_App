@@ -5,10 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: radial-gradient(rgb(65, 93, 93),rgb(15, 46, 51) );
+  /* background: radial-gradient(rgb(65, 93, 93),rgb(15, 46, 51) ); */
+  /* background: #F7FFF7; */
+  background: white;
   font-size: xx-large;
   height: 100vh;
   background-repeat: none;
+  width: 100vw;
 }
 
 code {

@@ -1,7 +1,26 @@
 
-.Word{
-    text-shadow: 5px 5px 5px rgb(17, 41, 92);
+.word{
     text-align: center;
-    margin: 2%;   
+    font-size: 2em;  
     font-family: Arial, Helvetica, sans-serif;
+    margin: 2% auto;
+
+}
+
+.link{
+    text-align: center;
+    font-size: 1em;  
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 2% auto;
+}
+
+.description{
+    text-align: center;
+    font-size: 1em;  
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 2% auto;
+}
+
+a{
+    color: rgb(54, 72, 233);
 }
