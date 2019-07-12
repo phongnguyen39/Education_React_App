@@ -76,12 +76,13 @@ class App extends Component {
     return (
       <div className="App" >
         <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet"></link>
+        
         <h1 id="title">Fun with Letters and Words</h1>
         <p>Select a letter</p>
         {categoryLetters}
         <div id="container">
-      
-            <h1 id="lg-letter">
+
+            <h1 id="lg-letter" >
               <Letter style={style} letter={this.state.letters} />
             </h1>
             

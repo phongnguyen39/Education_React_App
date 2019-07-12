@@ -11,9 +11,18 @@ const letter = (props) => {
     // let rand = Math.floor(Math.random() * 26)
     // let output = alpha.charAt(rand).toUpperCase() + " " + alpha.charAt(rand).toLowerCase();
     // return output;
+
+    // const element = document.querySelector('p');
+    // element.classList.add('animated','bounce');
+    // element.addEventListener('animationend',function(){
+    //     animateCSS('p','bounce')
+    // })
+
+
     return(
         <div>
-            <p>{props.letter}</p>
+             <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet"></link>
+            <p  className="animated bounce">{props.letter}</p>
         </div>
     )
 }
