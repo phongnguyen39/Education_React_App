@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Letter from './LetterGenerator/Letter';
 import Word from './WordGenerator/Word';
+import { BrowerRouter as Router, Route, Link } from 'react-router-dom';
 
 class App extends Component {
 
@@ -42,6 +43,9 @@ class App extends Component {
   }
 
   fetchFromAPI = (url) => {
+
+    // {credentials:'same-origin'}
+    //{mode:'no-cors'}
     fetch(url)
       .then((response) => response.json())
       .then(data => {
@@ -76,26 +80,21 @@ class App extends Component {
     return (
       <div className="App" >
         <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet"></link>
-        
+
         <h1 id="title">Fun with Letters and Words</h1>
         <p>Select a letter</p>
         {categoryLetters}
         <div id="container">
 
-            <h1 id="lg-letter" >
-              <Letter style={style} letter={this.state.letters} />
-            </h1>
-            
-
+          <Letter style={style} letter={this.state.letters} />
           <button onClick={this.randomize}>Random Letter</button>
 
-          <div id='word'>
-            <Word
-              randomWord={this.state.word}
-              wordDescription={this.state.description}
-              wordLink={this.state.link}
-            />
-          </div>
+          <Word
+            randomWord={this.state.word}
+            wordDescription={this.state.description}
+            wordLink={this.state.link}
+          />
+
         </div>
       </div>
     );

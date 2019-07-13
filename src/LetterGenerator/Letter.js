@@ -20,8 +20,8 @@ const letter = (props) => {
 
 
     return(
-        <div>
-             <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet"></link>
+        <div id="letter">
+             {/* <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet"></link> */}
             <p  className="animated bounce">{props.letter}</p>
         </div>
     )

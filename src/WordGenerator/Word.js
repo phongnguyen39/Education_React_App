@@ -4,7 +4,7 @@ import './Word.css';
 const word = (props) => {
     console.log('WOrdddd', props)
     return(
-        <div>
+        <div id='word'>
             <h2>Wiki Word of the Day</h2>
             <p className="word">{props.randomWord}</p>
             <p className='description'>
