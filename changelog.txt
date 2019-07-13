@@ -1,1 +1,2 @@
-7/13/2019:  Began building back-end.  Installed Express and React-Router-DOM
+7/13/2019:  Began building back-end.  
+	Installed Express, React-Router-DOM, CORS
