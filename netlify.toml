@@ -1,0 +1,4 @@
+[build]
+base = "education/"
+publish = "education/build/"
+command = "npm build"
