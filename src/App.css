@@ -18,13 +18,13 @@
 span{
   background: none;
   border: none;
-  font-size: 1.5em;
+  font-size: 2em;
   opacity: .9;
   color: #FF6B6B;
 }
 
 span:hover{
-  font-size: 2em;
+  font-size: 2.5em;
   color: #FFE66D;
   text-shadow: 1px 1px 10px black;
   opacity: 1;
@@ -34,7 +34,6 @@ span:hover{
   display: flex;
   align-content: space-around;
   justify-content: center;
-  height: 2em;
   align-content: bottom;
   /* border-top: 1px solid rgba(255, 255, 255, 0.246);
   border-bottom: 1px solid rgba(255, 255, 255, 0.246); */

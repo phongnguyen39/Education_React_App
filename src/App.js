@@ -34,7 +34,7 @@ class App extends Component {
     let url = 'https://en.wikipedia.org/w/api.php?action=opensearch&search='
     const alpha = "abcdefghijklmnopqrstuvwxyz";
     let rand = Math.floor(Math.random() * 26)
-    let output = alpha.charAt(rand).toUpperCase() + " " + alpha.charAt(rand).toLowerCase();
+    let output = alpha.charAt(rand).toUpperCase() + "  " + alpha.charAt(rand).toLowerCase();
     this.setState({
       letters: props + props.toLowerCase()
     })
