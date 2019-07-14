@@ -14,6 +14,7 @@ class App extends Component {
     description: '',
     link: ''
   }
+  
 
   randomize = () => {
     let url = 'https://en.wikipedia.org/w/api.php?action=opensearch&search='
@@ -46,9 +47,19 @@ class App extends Component {
 
     // {credentials:'same-origin'}
     //{mode:'no-cors'}
-    fetch(url)
+
+    // headers: {'content-type': 'application/json', 
+
+    fetch(url,{
+      mode: 'cors',
+      // credentials: 'same-origin',
+      crossDomain: true,
+      method: 'post',
+      headers: {'Access-Control-Allow-Origin':'*'}
+    })
       .then((response) => response.json())
       .then(data => {
+        console.log(data)
         if (data[1][1] == null) {
           console.log('error')
           return;
