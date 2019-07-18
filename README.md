@@ -1,3 +1,5 @@
+#Education App#
+
 A random letter and word generator teach the English alpahbet.
 
 Some technical features of the applications:
