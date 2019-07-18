@@ -5,15 +5,15 @@ Some technical features of the applications:
 
 
 Upcoming fixes:
--Bounce animation of letter component will happen each time a new letter is selected
--CORS update to Wikipedia API will be fixed by implementing a Express backend
+-Bounce animation of letter component will happen each time a new letter is selected.
+-CORS update to Wikipedia API will be fixed by implementing a Express backend.
 
 Upcoming features:
--Adding Google Translate API to sound out letters on command
--Adding more animations to create engagement for the learner
--Adding multiple language support (other languages)
--Adding shapes and numbers
--Adding numbers 
+-Adding Google Translate API to sound out letters on command.
+-Adding more animations to create engagement for the learner.
+-Adding multiple language support (other languages).
+-Adding shapes and numbers.
+-Adding numbers.
 
 
 
