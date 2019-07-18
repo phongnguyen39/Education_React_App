@@ -94,7 +94,7 @@ class App extends Component {
 
         <h1 id="title">Fun with Letters and Words</h1>
         <div id='landingContainer'>
-          <h6>Here is how this works... </h6>
+          <h2>Here is how this works... </h2>
           <p>Either select a letter of your choosing or we can pick one for you</p>
           <p>Once you pick one, have your little one receit it.</p>
           <p>Then move onto the associated word we picked from Wikipedia.</p>
