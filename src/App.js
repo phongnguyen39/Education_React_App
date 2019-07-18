@@ -93,6 +93,12 @@ class App extends Component {
         <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet"></link>
 
         <h1 id="title">Fun with Letters and Words</h1>
+        <div id='landingContainer'>
+          <h6>Here is how this works... </h6>
+          <p>Either select a letter of your choosing or we can pick one for you</p>
+          <p>Once you pick one, have your little one receit it.</p>
+          <p>Then move onto the associated word we picked from Wikipedia.</p>
+        </div>
         <p>Select a letter</p>
         {categoryLetters}
         <div id="container">
