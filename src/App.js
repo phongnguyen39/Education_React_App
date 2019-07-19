@@ -14,7 +14,7 @@ class App extends Component {
     description: '',
     link: ''
   }
-  
+
 
   randomize = () => {
     let url = 'https://en.wikipedia.org/w/api.php?action=opensearch&search='
@@ -50,12 +50,12 @@ class App extends Component {
 
     // headers: {'content-type': 'application/json', 
 
-    fetch(url,{
+    fetch(url, {
       mode: 'cors',
       // credentials: 'same-origin',
       crossDomain: true,
       method: 'post',
-      headers: {'Access-Control-Allow-Origin':'*'}
+      headers: { 'Access-Control-Allow-Origin': '*' }
     })
       .then((response) => response.json())
       .then(data => {
@@ -95,21 +95,22 @@ class App extends Component {
         <h1 id="title">Fun with Letters and Words</h1>
         <div id='landingContainer'>
           <h2><span>Here is how this works... </span></h2><br></br>
-          
+
           <p>1. Select a letter of your choosing <br></br>-or-<br></br> We can pick one for you</p>
           <p>2. Have the little one receit it</p>
           <p>3. Then onto the Wikipedia Word of the Day</p><br></br>
-          
-          
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#010101" d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"/></svg>
+
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#010101" d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z" /></svg>
           <p>Let's get started</p>
         </div>
         <p>Select a letter</p>
         {categoryLetters}
         <div id="container">
-
-          <Letter style={style} letter={this.state.letters} />
-          <button onClick={this.randomize}>Random Letter</button>
+          <div id='letterContainer'>
+            <Letter style={style} letter={this.state.letters} />
+            <button onClick={this.randomize}>Random Letter</button>
+          </div>
 
           <Word
             randomWord={this.state.word}
