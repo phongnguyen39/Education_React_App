@@ -85,9 +85,14 @@ button{
   box-shadow: 10px 10px gray;
 }
 
-#letterContainer{
+/* #letterContainer{
+  background: pink;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 90% 10%;
   border: .5px solid #4ECDC4;
-}
+  min-height: 50%;
+} */
 
 #word{
   padding: 1%;
