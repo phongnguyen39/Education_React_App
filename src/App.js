@@ -4,6 +4,9 @@ import Letter from './LetterGenerator/Letter';
 import Word from './WordGenerator/Word';
 import { BrowerRouter as Router, Route, Link } from 'react-router-dom';
 
+// TODO: https://catalog.data.gov/dataset    check out this data set 
+// TODO:  https://www.moesif.com/blog/technical/cors/Authoritative-Guide-to-CORS-Cross-Origin-Resource-Sharing-for-REST-APIs/#
+
 class App extends Component {
 
   state = {
@@ -107,10 +110,10 @@ class App extends Component {
         <p>Select a letter</p>
         {categoryLetters}
         <div id="container">
-          <div id='letterContainer'>
+          {/* <div id='letterContainer'> */}
             <Letter style={style} letter={this.state.letters} />
             <button onClick={this.randomize}>Random Letter</button>
-          </div>
+          {/* </div> */}
 
           <Word
             randomWord={this.state.word}
