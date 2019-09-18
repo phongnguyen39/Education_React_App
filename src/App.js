@@ -28,7 +28,7 @@ class App extends Component {
       letters: output
     })
     let search = url + output[2]
-    console.log(output);
+    // console.log(output);
     this.fetchFromAPI(search)
     return output;
   }
@@ -41,7 +41,14 @@ class App extends Component {
     this.setState({
       letters: props + props.toLowerCase()
     })
-    let search = url + props + output + output;
+    let randCombo = Math.floor(Math.random() * 5)
+    let outputLong = '';
+    for(let i = 0; i < randCombo; i++) {
+      let rand = Math.floor(Math.random() * 26)
+      outputLong += alpha.charAt(rand).toLowerCase();
+      console.log(outputLong)
+    }
+    let search = url + props + outputLong;
     console.log(search)
     this.fetchFromAPI(search)
   }
@@ -57,7 +64,7 @@ class App extends Component {
     })
       .then((response) => response.json())
       .then(data => {
-        console.log(data)
+        // console.log('DATA', data)
         if (data[1][1] == null) {
           console.log('error')
           return;
@@ -68,10 +75,9 @@ class App extends Component {
             description: data[2][1],
             link: data[3][1]
           })
-          console.log(this.state.words);
+          // console.log(this.state.words);
         }
-        console.log(this.getOwnPropertyNames)
-      })      
+      })
   }
 
   render() {
