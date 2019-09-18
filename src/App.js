@@ -46,19 +46,14 @@ class App extends Component {
     this.fetchFromAPI(search)
   }
 
-  fetchFromAPI = (url) => {
-
-    // {credentials:'same-origin'}
-    //{mode:'no-cors'}
-
-    // headers: {'content-type': 'application/json', 
-
+  fetchFromAPI = (url) => {    
     fetch(url, {
       mode: 'cors',
       // credentials: 'same-origin',
       crossDomain: true,
       method: 'post',
-      headers: { 'Access-Control-Allow-Origin': '*' }
+      origin: 'https://en.wikipedia.org/'
+      // headers: { 'Access-Control-Allow-Origin': origin }
     })
       .then((response) => response.json())
       .then(data => {
@@ -75,7 +70,8 @@ class App extends Component {
           })
           console.log(this.state.words);
         }
-      })
+        console.log(this.getOwnPropertyNames)
+      })      
   }
 
   render() {
