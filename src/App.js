@@ -27,7 +27,14 @@ class App extends Component {
     this.setState({
       letters: output
     })
-    let search = url + output[2]
+    let randCombo = Math.floor(Math.random() * 5)
+    let outputLong = '';
+    for(let i = 0; i < randCombo; i++) {
+      let rand = Math.floor(Math.random() * 26)
+      outputLong += alpha.charAt(rand).toLowerCase();
+      console.log(outputLong)
+    }
+    let search = url + output[2] + outputLong
     // console.log(output);
     this.fetchFromAPI(search)
     return output;
@@ -53,14 +60,23 @@ class App extends Component {
     this.fetchFromAPI(search)
   }
 
-  fetchFromAPI = (url) => {    
+
+
+
+  fetchFromAPI = (url) => { 
+    // console.log('Origin ', Access-Control-Allow-Origin)
+    // console.log('Credential ',Access-Control-Allow-Credentials)
+    // console.log('Header', header)
+    // console.log(Access-Control-Allow-Methods)
+    
+
     fetch(url, {
       mode: 'cors',
       // credentials: 'same-origin',
       crossDomain: true,
       method: 'post',
-      origin: 'https://en.wikipedia.org/'
-      // headers: { 'Access-Control-Allow-Origin': origin }
+      origin: {'Access-Control-Allow-Origin':'*'},
+      headers: { 'Access-Control-Allow-Headers': '*'}
     })
       .then((response) => response.json())
       .then(data => {
@@ -79,6 +95,8 @@ class App extends Component {
         }
       })
   }
+  
+  
 
   render() {
     const style = {
@@ -87,14 +105,19 @@ class App extends Component {
     let categoryLetters = null;
     const capLetter = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',]
     categoryLetters = (
+
       <div id="alphabet">
         {capLetter.map((letter, index) => {
           return <span onClick={this.selectLetter.bind(this, letter)} key={index} value={letter}>{letter}</span>
         })}
       </div>
     );
+    
+    
     return (
+      
       <div className="App" >
+
         <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet"></link>
 
         <h1 id="title">Fun with Letters and Words</h1>
@@ -110,6 +133,7 @@ class App extends Component {
           <p>Let's get started</p>
         </div>
         <p>Select a letter</p>
+
         {categoryLetters}
         <div id="container">
           {/* <div id='letterContainer'> */}

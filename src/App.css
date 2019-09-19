@@ -62,6 +62,9 @@ span:hover{
   align-content: space-around;
   justify-content: center;
   align-content: bottom;
+  border: .5px .5px .5px .5px;
+  border-color: gray;
+  z-index: 1;
   /* border-top: 1px solid rgba(255, 255, 255, 0.246);
   border-bottom: 1px solid rgba(255, 255, 255, 0.246); */
 }
@@ -72,6 +75,7 @@ span:hover{
   grid-template-columns: 55% 45%;
   grid-template-rows: 60% 40%;
   grid-gap: 1%;
+  max-height: 100%;
 }
 
 button{
@@ -107,5 +111,7 @@ button{
   /* box-shadow: 10px 10px gray; */
   color: #FF6B6B;
   border: .5px solid #4ECDC4;
+  max-height: 100%;
+  overflow: hidden;
   
 }
