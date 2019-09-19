@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import './App.css';
-import Letter from './LetterGenerator/Letter';
-import Word from './WordGenerator/Word';
+import Alphabet from './Alphabet/alphabet';
+// import Letter from './LetterGenerator/Letter';
+// import Word from './WordGenerator/Word';
 import { BrowerRouter as Router, Route, Link } from 'react-router-dom';
 
 // TODO: https://catalog.data.gov/dataset    check out this data set 
@@ -29,7 +31,7 @@ class App extends Component {
     })
     let randCombo = Math.floor(Math.random() * 5)
     let outputLong = '';
-    for(let i = 0; i < randCombo; i++) {
+    for (let i = 0; i < randCombo; i++) {
       let rand = Math.floor(Math.random() * 26)
       outputLong += alpha.charAt(rand).toLowerCase();
       console.log(outputLong)
@@ -50,7 +52,7 @@ class App extends Component {
     })
     let randCombo = Math.floor(Math.random() * 5)
     let outputLong = '';
-    for(let i = 0; i < randCombo; i++) {
+    for (let i = 0; i < randCombo; i++) {
       let rand = Math.floor(Math.random() * 26)
       outputLong += alpha.charAt(rand).toLowerCase();
       console.log(outputLong)
@@ -63,26 +65,22 @@ class App extends Component {
 
 
 
-  fetchFromAPI = (url) => { 
-    // console.log('Origin ', Access-Control-Allow-Origin)
-    // console.log('Credential ',Access-Control-Allow-Credentials)
-    // console.log('Header', header)
-    // console.log(Access-Control-Allow-Methods)
-    
+  fetchFromAPI = (url) => {
 
     fetch(url, {
+
       mode: 'cors',
       credentials: 'same-origin',
       content: 'application/json',
       crossDomain: true,
       method: 'post',
-      header: { 'Access-Control-Allow-Origin': 'http://localhost:3000'},
+      header: { 'Access-Control-Allow-Origin': 'http://localhost:3000', 'Access-Control-Allow-Credentials': true },
       header: 'Access-Control-Allow-Header'
     })
       .then((response) => response.json())
       .then(data => {
         // console.log('DATA', data)
-        
+
         if (data[1][1] == null) {
           console.log('error')
           return;
@@ -97,8 +95,8 @@ class App extends Component {
         }
       })
   }
-  
-  
+
+
 
   render() {
     const style = {
@@ -114,21 +112,33 @@ class App extends Component {
         })}
       </div>
     );
-    
-    
+
+
     return (
-      
+
       <div className="App" >
 
         <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet"></link>
 
-        <h1 id="title">Fun with Letters and Words</h1>
+        <h1 id="title">Learning the Basics</h1>
         <div id='landingContainer'>
-          <h1 id='landingText'>Here is how this works... </h1><br></br>
 
-          <p>1. Select a letter of your choosing <br></br>-or-<br></br> We can pick one for you</p>
-          <p>2. Have the little one receit it</p>
-          <p>3. Then onto the Wikipedia Word of the Day</p><br></br>
+          <h1 id='landingText'>Here is how this works... </h1><br></br>
+          <h3>Pick a Subject</h3><br></br>
+          <ul>
+            <li><a href='alphabet'><u>Alphabet</u></a></li><br></br>
+            <li><a href='math'><u>Math</u></a></li><br></br>
+            <li><a href='shapes'><u>Shapes</u></a></li><br></br>
+          </ul>
+
+          
+          <ol>
+            <li>1. Select a letter of your choosing <br></br>-or-<br></br> We can pick one for you</li>
+            <li>2. Have the little one receit it</li>
+            <li>3. Then onto the Wikipedia Word of the Day</li><br></br>
+
+          </ol>
+
 
 
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#010101" d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z" /></svg>
@@ -139,8 +149,8 @@ class App extends Component {
         {categoryLetters}
         <div id="container">
           {/* <div id='letterContainer'> */}
-            <Letter style={style} letter={this.state.letters} />
-            <button onClick={this.randomize}>Random Letter</button>
+          <Letter style={style} letter={this.state.letters} />
+          <button onClick={this.randomize}>Random Letter</button>
           {/* </div> */}
 
           <Word

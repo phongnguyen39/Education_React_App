@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.d6418ffe.chunk.css",
-    "main.js": "/static/js/main.9dbc7dce.chunk.js",
-    "main.js.map": "/static/js/main.9dbc7dce.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.9918f956.chunk.js": "/static/js/2.9918f956.chunk.js",
-    "static/js/2.9918f956.chunk.js.map": "/static/js/2.9918f956.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.1db8178235f6dd0a2dfed57c1928827a.js": "/precache-manifest.1db8178235f6dd0a2dfed57c1928827a.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.d6418ffe.chunk.css.map": "/static/css/main.d6418ffe.chunk.css.map"
+    "main.css": "/phongnguyen39/Education_React_App/static/css/main.d6418ffe.chunk.css",
+    "main.js": "/phongnguyen39/Education_React_App/static/js/main.c51d41e1.chunk.js",
+    "main.js.map": "/phongnguyen39/Education_React_App/static/js/main.c51d41e1.chunk.js.map",
+    "runtime~main.js": "/phongnguyen39/Education_React_App/static/js/runtime~main.8b5687ac.js",
+    "runtime~main.js.map": "/phongnguyen39/Education_React_App/static/js/runtime~main.8b5687ac.js.map",
+    "static/js/2.cc21022f.chunk.js": "/phongnguyen39/Education_React_App/static/js/2.cc21022f.chunk.js",
+    "static/js/2.cc21022f.chunk.js.map": "/phongnguyen39/Education_React_App/static/js/2.cc21022f.chunk.js.map",
+    "index.html": "/phongnguyen39/Education_React_App/index.html",
+    "precache-manifest.6ba40d1a94bea11b6d4acf3a5f964fdf.js": "/phongnguyen39/Education_React_App/precache-manifest.6ba40d1a94bea11b6d4acf3a5f964fdf.js",
+    "service-worker.js": "/phongnguyen39/Education_React_App/service-worker.js",
+    "static/css/main.d6418ffe.chunk.css.map": "/phongnguyen39/Education_React_App/static/css/main.d6418ffe.chunk.css.map"
   }
 }
