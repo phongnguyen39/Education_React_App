@@ -72,15 +72,17 @@ class App extends Component {
 
     fetch(url, {
       mode: 'cors',
-      // credentials: 'same-origin',
+      credentials: 'same-origin',
+      content: 'application/json',
       crossDomain: true,
       method: 'post',
-      origin: {'Access-Control-Allow-Origin':'*'},
-      headers: { 'Access-Control-Allow-Headers': '*'}
+      header: { 'Access-Control-Allow-Origin': 'http://localhost:3000'},
+      header: 'Access-Control-Allow-Header'
     })
       .then((response) => response.json())
       .then(data => {
         // console.log('DATA', data)
+        
         if (data[1][1] == null) {
           console.log('error')
           return;
