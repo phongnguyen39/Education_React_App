@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 import Alphabet from './Alphabet/alphabet';
-// import Letter from './LetterGenerator/Letter';
-// import Word from './WordGenerator/Word';
+import Letter from './LetterGenerator/Letter';
+import Word from './WordGenerator/Word';
 import { BrowerRouter as Router, Route, Link } from 'react-router-dom';
 
 // TODO: https://catalog.data.gov/dataset    check out this data set 
