@@ -4,6 +4,7 @@ import './App.css';
 import Alphabet from './Alphabet/alphabet';
 import Letter from './LetterGenerator/Letter';
 import Word from './WordGenerator/Word';
+import Numbers from './Numbers/Numbers'
 import { BrowerRouter as Router, Route, Link } from 'react-router-dom';
 
 // TODO: https://catalog.data.gov/dataset    check out this data set 
@@ -131,15 +132,11 @@ class App extends Component {
             <li><a href='shapes'><u>Shapes</u></a></li><br></br>
           </ul>
 
-          
           <ol>
             <li>1. Select a letter of your choosing <br></br>-or-<br></br> We can pick one for you</li>
             <li>2. Have the little one receit it</li>
             <li>3. Then onto the Wikipedia Word of the Day</li><br></br>
-
           </ol>
-
-
 
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#010101" d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z" /></svg>
           <p>Let's get started</p>
@@ -158,7 +155,10 @@ class App extends Component {
             wordDescription={this.state.description}
             wordLink={this.state.link}
           />
-
+        </div>
+        <div>
+        <Numbers style={style}
+          />
         </div>
       </div>
     );
