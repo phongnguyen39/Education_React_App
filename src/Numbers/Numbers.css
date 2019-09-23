@@ -1,5 +1,6 @@
 
 #numbers{
+    background: red;
     grid-column-start: 1;
     grid-row-start: 0;
     grid-row-end: 2;

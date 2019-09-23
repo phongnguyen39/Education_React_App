@@ -24,11 +24,9 @@ const Numbers = () => {
     // )
     return (
         <div>
-            <form>
-                <input type='number' placeholder='Enter a number'></input>
-                <button type='submit' value='Spell It'></button>
-            </form>
-            <div id='numbers'>{this.randomNumOutput}</div>
+            <div id='numbers'>
+                {/* <h1>{this.randomNumOutput}</h1> */}
+                </div>
             <button onClick={random}>Random Number</button>
 
 
