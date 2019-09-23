@@ -1,4 +1,13 @@
+
 #numbers{
+    grid-column-start: 1;
+    grid-row-start: 0;
+    grid-row-end: 2;
+    font-size: 10em;
+    font-weight: normal;
+    margin: 0; 
+    color:  #FF6B6B;
+    /* box-shadow: 10px 10px gray; */
+    /* background: #FFE66D; */
     height: 100%;
-    width: 100%;
 }

@@ -2,13 +2,19 @@ import React from 'react';
 import './Numbers.css';
 
 // Method to spell out number
-const spellIt = (inputNum) => {
-    console.log(inputNum)
+const spellIt = (props) => {
+    console.log(props)
+}
+
+const random = () => {
+    let randomNumOutput = Math.ceil(Math.random() * 10);
+    console.log(randomNumOutput)
+    return randomNumOutput;
 }
 
 
-const numbers = () => {
-    const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const Numbers = () => {
+
     // categoryNumbers = (
     //     <div id = 'numbers'>
     //         {number.map((number,index)=>{
@@ -17,11 +23,13 @@ const numbers = () => {
     //     </div>
     // )
     return (
-        <div id='numbers'>
-            <form action='/spellIt'>
+        <div>
+            <form>
                 <input type='number' placeholder='Enter a number'></input>
-                <button type = 'submit' value='Spell It'></button>
+                <button type='submit' value='Spell It'></button>
             </form>
+            <div id='numbers'>{this.randomNumOutput}</div>
+            <button onClick={random}>Random Number</button>
 
 
             <ul>
@@ -32,4 +40,4 @@ const numbers = () => {
     );
 };
 
-export default numbers;
+export default Numbers;

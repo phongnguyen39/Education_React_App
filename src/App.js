@@ -6,6 +6,9 @@ import Letter from './LetterGenerator/Letter';
 import Word from './WordGenerator/Word';
 import Numbers from './Numbers/Numbers'
 import { BrowerRouter as Router, Route, Link } from 'react-router-dom';
+import abcImg from './abc.png';
+import numberImg from './numbers.png';
+import shapesImg from './shapes.png';
 
 // TODO: https://catalog.data.gov/dataset    check out this data set 
 // TODO:  https://www.moesif.com/blog/technical/cors/Authoritative-Guide-to-CORS-Cross-Origin-Resource-Sharing-for-REST-APIs/#
@@ -115,38 +118,35 @@ class App extends Component {
       </div>
     );
 
-    
-
-
     return (
 
       <div className="App" >
-
         <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet"></link>
 
         <h1 id="title">Learning the Basics</h1>
         <div id='landingContainer'>
+          {/* <h1 className='lgText'>Here is how this works... </h1><br></br> */}
+          <h1 className='lgText'>Pick a Subject</h1><br></br>
 
-          <h1 className='lgText'>Here is how this works... </h1><br></br>
-          <h3>Pick a Subject</h3><br></br>
+
+
+
           <ul>
-            <li><a href='alphabet'><u>Alphabet</u></a></li><br></br>
-            <li><a href='math'><u>Math</u></a></li><br></br>
-            <li><a href='shapes'><u>Shapes</u></a></li><br></br>
+            <li className='inlineList'><a href='alphabet'><img src={abcImg}></img></a></li><br></br>
+            <li className='inlineList'><a href='math'><img src={numberImg}></img></a></li><br></br>
+            <li className='inlineList'><a href='shapes'><img src={shapesImg}></img></a></li><br></br>
           </ul>
-
-
 
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#010101" d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z" /></svg>
           <p>Let's get started</p>
         </div>
 
         <h1 className='lgText'>Alphabet</h1><br></br>
-        <ol>
+        {/* <ol>
           <li>1. Select a letter of your choosing <br></br>-or-<br></br> We can pick one for you</li>
           <li>2. Have the little one receit it</li>
           <li>3. Then onto the Wikipedia Word of the Day</li><br></br>
-        </ol>
+        </ol> */}
 
         <p>Select a letter</p>
         {categoryLetters}
@@ -165,10 +165,10 @@ class App extends Component {
           />
         </div>
         <h1 className='lgText'>Numbers</h1><br></br>
-        <div >
-          <Numbers />
-          <button onClick={this.randomizeNumber}>Random Number</button>
-        </div>
+
+        <Numbers />
+
+
       </div>
     );
   }

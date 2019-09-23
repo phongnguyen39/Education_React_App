@@ -103,6 +103,11 @@ button{
   min-height: 50%;
 } */
 
+img{
+  width: 15%;
+  height: 15%;
+}
+
 #word{
   padding: 1%;
   grid-column-start: 2;
@@ -116,3 +121,10 @@ button{
   overflow: hidden;
   
 }
+
+#custom {
+  color: rgb(107, 122, 255);
+  font-family: 'Permanent Marker', cursive;
+  font-size: 200px;
+}
+
