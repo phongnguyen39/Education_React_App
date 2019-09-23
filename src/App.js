@@ -103,6 +103,7 @@ class App extends Component {
     const style = {
       font: '1.5em'
     }
+
     let categoryLetters = null;
     const capLetter = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',]
     categoryLetters = (
@@ -114,6 +115,8 @@ class App extends Component {
       </div>
     );
 
+    
+
 
     return (
 
@@ -124,7 +127,7 @@ class App extends Component {
         <h1 id="title">Learning the Basics</h1>
         <div id='landingContainer'>
 
-          <h1 id='landingText'>Here is how this works... </h1><br></br>
+          <h1 className='lgText'>Here is how this works... </h1><br></br>
           <h3>Pick a Subject</h3><br></br>
           <ul>
             <li><a href='alphabet'><u>Alphabet</u></a></li><br></br>
@@ -132,20 +135,25 @@ class App extends Component {
             <li><a href='shapes'><u>Shapes</u></a></li><br></br>
           </ul>
 
-          <ol>
-            <li>1. Select a letter of your choosing <br></br>-or-<br></br> We can pick one for you</li>
-            <li>2. Have the little one receit it</li>
-            <li>3. Then onto the Wikipedia Word of the Day</li><br></br>
-          </ol>
+
 
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#010101" d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z" /></svg>
           <p>Let's get started</p>
         </div>
-        <p>Select a letter</p>
 
+        <h1 className='lgText'>Alphabet</h1><br></br>
+        <ol>
+          <li>1. Select a letter of your choosing <br></br>-or-<br></br> We can pick one for you</li>
+          <li>2. Have the little one receit it</li>
+          <li>3. Then onto the Wikipedia Word of the Day</li><br></br>
+        </ol>
+
+        <p>Select a letter</p>
         {categoryLetters}
         <div id="container">
+
           {/* <div id='letterContainer'> */}
+
           <Letter style={style} letter={this.state.letters} />
           <button onClick={this.randomize}>Random Letter</button>
           {/* </div> */}
@@ -156,9 +164,10 @@ class App extends Component {
             wordLink={this.state.link}
           />
         </div>
-        <div>
-        <Numbers style={style}
-          />
+        <h1 className='lgText'>Numbers</h1><br></br>
+        <div >
+          <Numbers />
+          <button onClick={this.randomizeNumber}>Random Number</button>
         </div>
       </div>
     );
