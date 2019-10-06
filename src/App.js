@@ -127,10 +127,6 @@ class App extends Component {
         <div id='landingContainer'>
           {/* <h1 className='lgText'>Here is how this works... </h1><br></br> */}
           <h1 className='lgText'>Pick a Subject</h1><br></br>
-
-
-
-
           <ul>
             <li className='inlineList'><a href='alphabet'><img src={abcImg}></img></a></li><br></br>
             <li className='inlineList'><a href='math'><img src={numberImg}></img></a></li><br></br>
